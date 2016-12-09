@@ -10,14 +10,18 @@
         <div class="top-menu">
             
         </div>
-        <form id="gameStart">
+        <form id="startGameForm">
             <div class="container">
-                <input type="text" class="form-input" placeholder="Enter Your Name"></input>
+                <input type="text" class="form-input" id="name" placeholder="Enter Your Name"></input>
                 <select id="genderDorpdown">
                     <option value="">Select Gender</option>
                 </select>
+            <button id="startGameButton" type="submit">Start <span>&gt;</span></button> 
             </div>
         </form>
+        <div id="gameArea">
+            
+        </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="gameData.js"></script>
         <script src="app.js"></script>

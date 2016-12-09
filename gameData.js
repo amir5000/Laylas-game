@@ -21,5 +21,9 @@ var gameData = {
         coinWidth: 0
     },
     totalCoins: 0,
-    seconds: 0
+    seconds: 0,
+    formFields : {
+        name: false,
+        gender: false
+    }
 };
