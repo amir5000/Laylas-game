@@ -1,18 +1,12 @@
 var documentObject = $(document);
 var windowObject = $(window);
-var genderDorpdown = $('#genderDorpdown');
-var genderSelect = $('#genderDorpdown');
 var startGameForm = $('#startGame');
 var startGameButton = $('#startGameButton');
+var boy = $('#boy');
+var girl = $('#girl');
 var playerName = $('#name');
 
 
-gameData.player.genders.forEach(function(gender){
-    genderDorpdown.append($('<option>', {
-        value: gender,
-        text: gender
-    }));
-});
 
 windowObject.on('load', function () {
     if (!gameData.formFields.name || !gameData.formFields.gender) {
@@ -29,16 +23,19 @@ windowObject.on('load', function () {
             startGameButton.attr('disabled', true);
         }
     });
-    genderSelect.on('change', function () {
-        var valueSelected = this.value;
-        gameData.formFields.gender = true;
-        if (valueSelected !== "" && gameData.formFields.gender && gameData.formFields.name) {
-            startGameButton.removeAttr('disabled');
-        } else if (valueSelected === "") {
-            gameData.formFields.gender = false;
-            startGameButton.attr('disabled', true);
-        }
+    
+    boy.on('click touchend', function () {
+        boy.removeClass('active');
+        girl.removeClass('active');
+        $(this).addClass('active');
     });
+    
+    girl.on('click touchend', function () {
+        boy.removeClass('active');
+        girl.removeClass('active');
+        $(this).addClass('active');
+    });
+    
 });
 
 startGameButton.on('click touchend', function (e) {

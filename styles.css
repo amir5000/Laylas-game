@@ -7,9 +7,9 @@ body {
   position: relative;
   background-color: lightgreen;
 }
-#startGameForm {
+.start-menu {
   position: fixed;
-  top: 30%;
+  top: 20%;
   margin: 0 0 0 -250px;
   border-radius: 20px;
   left: 50%;
@@ -20,25 +20,43 @@ body {
   background-color: #FFF;
 }
 @media (max-width: 480px) {
-  #startGameForm {
+  .start-menu {
     left: 0;
     top: 15%;
     margin: 0 0 0 5%;
     width: 90%;
   }
 }
-#startGameForm .container {
+.start-menu .container {
   padding: 50px;
 }
-#startGameForm input,
-#startGameForm select {
+.start-menu .boy-select,
+.start-menu .girl-select {
+  width: 40%;
+  float: left;
+  margin: 20px 5%;
+}
+.start-menu .boy-select img,
+.start-menu .girl-select img {
+  width: 100%;
+  display: block;
+  cursor: pointer;
+  border: 5px solid transparent;
+}
+.start-menu .boy-select img.active,
+.start-menu .girl-select img.active {
+  border-color: green;
+  border-radius: 20px;
+  box-shadow: 0 0 20px 5px lightgreen;
+}
+.start-menu input {
   width: 100%;
   height: 30px;
   font-size: 20px;
   text-indent: 10px;
   margin: 10px 0;
 }
-#startGameForm button {
+.start-menu button {
   width: 100%;
   font-size: 20px;
   color: #FFF;
@@ -49,7 +67,7 @@ body {
   padding: 5px;
   cursor: pointer;
 }
-#startGameForm button:disabled {
+.start-menu button:disabled {
   cursor: not-allowed;
   opacity: 0.5;
 }

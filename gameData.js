@@ -2,7 +2,6 @@ var gameData = {
     player: {
         name: "",
         gender: "",
-        genders: ["Male", "Female"],
         topCoinPosition: 0,
         leftCoinPosition: 0,
         coinHeight: 0,
