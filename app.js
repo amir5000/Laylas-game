@@ -25,15 +25,15 @@ windowObject.on('load', function () {
     });
     
     boy.on('click touchend', function () {
-        boy.removeClass('active');
-        girl.removeClass('active');
-        $(this).addClass('active');
+        boy.parent().removeClass('active');
+        girl.parent().removeClass('active');
+        $(this).parent().addClass('active');
     });
     
     girl.on('click touchend', function () {
-        boy.removeClass('active');
-        girl.removeClass('active');
-        $(this).addClass('active');
+        boy.parent().removeClass('active');
+        girl.parent().removeClass('active');
+        $(this).parent().addClass('active');
     });
     
 });

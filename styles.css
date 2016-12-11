@@ -28,33 +28,49 @@ body {
   }
 }
 .start-menu .container {
-  padding: 50px;
+  padding: 20px 50px 50px;
+}
+.start-menu p {
+  clear: both;
+  font-size: 20px;
+  margin: 0;
+  text-align: center;
+}
+.start-menu .gender-container {
+  clear: both;
+}
+.start-menu .gender-container p {
+  margin: 10px 0;
 }
 .start-menu .boy-select,
 .start-menu .girl-select {
   width: 40%;
   float: left;
   margin: 20px 5%;
+  border: 5px solid transparent;
+  box-sizing: border-box;
 }
 .start-menu .boy-select img,
 .start-menu .girl-select img {
-  width: 100%;
+  padding: 10px;
+  width: 130px;
   display: block;
   cursor: pointer;
-  border: 5px solid transparent;
 }
-.start-menu .boy-select img.active,
-.start-menu .girl-select img.active {
+.start-menu .boy-select.active,
+.start-menu .girl-select.active {
   border-color: green;
   border-radius: 20px;
   box-shadow: 0 0 20px 5px lightgreen;
 }
 .start-menu input {
   width: 100%;
-  height: 30px;
+  height: 35px;
   font-size: 20px;
   text-indent: 10px;
   margin: 10px 0;
+  border: 2px solid lightgreen;
+  border-radius: 4px;
 }
 .start-menu button {
   width: 100%;
@@ -70,4 +86,10 @@ body {
 .start-menu button:disabled {
   cursor: not-allowed;
   opacity: 0.5;
+}
+.divide {
+  border: 1px solid #222;
+  width: 100%;
+  margin: 50px 10px;
+  clear: both;
 }
