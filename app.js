@@ -1,15 +1,17 @@
 var documentObject = $(document);
 var windowObject = $(window);
-var startGameForm = $('#startGame');
-var startGameButton = $('#startGameButton');
 var boy = $('#boy');
 var girl = $('#girl');
 var playerName = $('#name');
-
+var startGameButton = $('#startGameButton');
+var startMenu = $('#startMenu');
+var gameArea = $('#gameArea');
+var currentGender = gameData.player.gender;
+var currentName = gameData.player.name;
 
 
 windowObject.on('load', function () {
-    if (playerName.val() === "" || gameData.player.gender === "") {
+    if (currentName === "" || currentGender === "") {
         startGameButton.attr('disabled', true);
     }
     
@@ -17,7 +19,7 @@ windowObject.on('load', function () {
         boy.parent().removeClass('active').removeClass('deactive');;
         girl.parent().removeClass('active').addClass('deactive');
         $(this).parent().addClass('active');
-        gameData.player.gender = "Boy";
+        currentGender = "Boy";
         if (playerName.val() !== "" ) {
             startGameButton.removeAttr('disabled');
         }
@@ -27,7 +29,7 @@ windowObject.on('load', function () {
         boy.parent().removeClass('active').addClass('deactive');
         girl.parent().removeClass('active').removeClass('deactive');
         $(this).parent().addClass('active');
-        gameData.player.gender = "Girl";
+        currentGender = "Girl";
         if (playerName.val() !== "" ) {
             startGameButton.removeAttr('disabled');
         }
@@ -35,11 +37,11 @@ windowObject.on('load', function () {
     
     playerName.on('change', function () {
         var valueSelected = this.value;
-        if (valueSelected !== "" && gameData.player.gender !== "") {
+        currentName = valueSelected;
+        if (valueSelected !== "" && currentGender !== "") {
             startGameButton.removeAttr('disabled');
-            gameData.player.name = valueSelected;
         } else if (valueSelected === "") {
-            gameData.player.name = "";
+            currentName = "";
             startGameButton.attr('disabled', true);
         }
     });
@@ -47,6 +49,17 @@ windowObject.on('load', function () {
 
 startGameButton.on('click touchend', function (e) {
     e.preventDefault(); 
-    
+    startMenu.remove();
+    startGame(); // Starting the Game!!!!!!!!!!!!!!!
 });
 
+function startGame() {
+    gameArea.fadeIn(500).append('<h1 class="transition-title">Asalamu Alikum! My name is ' + currentName + '.</h1>');
+    
+    if (currentGender === "Girl") {
+        gameArea.append('<img src="girl.png" alt="girl" />');
+            
+    } else {
+        gameArea.append('<img src="boy.png" alt="Boy" />');
+    }
+}

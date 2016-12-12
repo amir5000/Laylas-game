@@ -98,3 +98,18 @@ body {
   margin: 50px 10px;
   clear: both;
 }
+#gameArea {
+  padding: 50px;
+  display: none;
+}
+#gameArea h1 {
+  text-align: center;
+}
+#gameArea h1.transition-title {
+  transition: opacity 5s ease;
+}
+#gameArea img {
+  margin: 0 auto;
+  width: 300px;
+  display: block;
+}
