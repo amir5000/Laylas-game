@@ -54,12 +54,13 @@ startGameButton.on('click touchend', function (e) {
 });
 
 function startGame() {
-    gameArea.fadeIn(500).append('<h1 class="transition-title">Asalamu Alikum! My name is ' + currentName + '.</h1>');
+    gameArea.fadeIn(500);
+    $('#nameArea').html(currentName);
     
     if (currentGender === "Girl") {
-        gameArea.append('<img src="girl.png" alt="girl" />');
+        $('#playerGirl').show();
             
     } else {
-        gameArea.append('<img src="boy.png" alt="Boy" />');
+        $('#playerBoy').show();
     }
 }

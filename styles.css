@@ -113,3 +113,6 @@ body {
   width: 300px;
   display: block;
 }
+#gameArea #nameArea {
+  text-transform: capitalize;
+}
