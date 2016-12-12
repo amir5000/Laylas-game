@@ -54,6 +54,7 @@ body {
         margin: 20px 5%;
         border: 5px solid transparent;
         box-sizing: border-box;
+        transition: opacity 0.5s ease;
         
         img {
             padding: 10px;
@@ -67,6 +68,10 @@ body {
             border-color: @main-color;
             border-radius: 20px;
             box-shadow: 0 0 20px 5px @secondary-color;
+        }
+        
+        &.deactive {
+            opacity: 0.5;
         }
     }
     

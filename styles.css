@@ -49,6 +49,7 @@ body {
   margin: 20px 5%;
   border: 5px solid transparent;
   box-sizing: border-box;
+  transition: opacity 0.5s ease;
 }
 .start-menu .boy-select img,
 .start-menu .girl-select img {
@@ -62,6 +63,10 @@ body {
   border-color: green;
   border-radius: 20px;
   box-shadow: 0 0 20px 5px lightgreen;
+}
+.start-menu .boy-select.deactive,
+.start-menu .girl-select.deactive {
+  opacity: 0.5;
 }
 .start-menu input {
   width: 100%;

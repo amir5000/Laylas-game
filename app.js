@@ -14,8 +14,8 @@ windowObject.on('load', function () {
     }
     
     boy.on('click touchend', function () {
-        boy.parent().removeClass('active');
-        girl.parent().removeClass('active');
+        boy.parent().removeClass('active').removeClass('deactive');;
+        girl.parent().removeClass('active').addClass('deactive');
         $(this).parent().addClass('active');
         gameData.player.gender = "Boy";
         if (playerName.val() !== "" ) {
@@ -24,8 +24,8 @@ windowObject.on('load', function () {
     });
     
     girl.on('click touchend', function () {
-        boy.parent().removeClass('active');
-        girl.parent().removeClass('active');
+        boy.parent().removeClass('active').addClass('deactive');
+        girl.parent().removeClass('active').removeClass('deactive');
         $(this).parent().addClass('active');
         gameData.player.gender = "Girl";
         if (playerName.val() !== "" ) {
@@ -46,7 +46,7 @@ windowObject.on('load', function () {
 });
 
 startGameButton.on('click touchend', function (e) {
-   e.preventDefault(); 
+    e.preventDefault(); 
     
 });
 
