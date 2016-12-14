@@ -24,15 +24,22 @@
                 </div>
                 <div class="divide"></div>
                 <p>Enter Your Name:</p>
-                <input type="text" class="form-input" id="name" placeholder="Name"></input>
-                <button id="startGameButton" type="button">Start <span>&gt;</span></button>
+                <input type="text" class="form-input" autocomplete="off" id="name" placeholder="Name"></input>
+                <button id="startGameButton" type="button">Start <span class="move-x">&gt;</span></button>
             </div>
         </div>
         <div id="gameArea">
-            <h1 class="transition-title">Asalamu Alikum! My name is <span id="nameArea"></span></h1>
             <img id="playerBoy" src="boy.png" alt="boy" style="display: none;" />
             <img id="playerGirl" src="girl.png" alt="girl" style="display: none;" />
-            <button id="continueButton">Continue <span>&gt;</span></button>
+            <div id="stepOne">
+                <h1 class="transition-title">Asalamu Alikum! My name is <span id="nameArea"></span></h1>
+            </div>
+            <div id="stepTwo" style="display: none;">
+                <h1 class="transition-title">Select a game:</h1>
+                <div id="gameButtons">
+                </div>
+            </div>
+            <button id="continueButton" class="btn-continue">Continue <span class="move-x">&gt;</span></button>
         </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="gameData.js"></script>
